@@ -1,4 +1,4 @@
-from django.test import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
@@ -8,7 +8,7 @@ import unittest
 
 MAX_WAIT = 10
 
-class NewVisitorTest(LiveServerTestCase): #(1)
+class NewVisitorTest(StaticLiveServerTestCase): #(1)
     
     def setUp(self): #(3)
         self.browser = webdriver.Firefox()
