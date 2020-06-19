@@ -122,4 +122,5 @@ class NewItemTest(TestCase):
             data={'item_text':'A new item for an existing list'}
         )
         self.assertRedirects(response, f'/lists/{correct_list.id}/')
+
 # Create your tests here.
